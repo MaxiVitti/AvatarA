@@ -28,7 +28,7 @@ const userColumns = {
 const User = sequelize.define('User', userColumns, { tableName: 'users' });
 
 const customFindOne = async (userToFind) => {
-    return await User.findOne({ where: { userToFind } });
+    return await User.findOne({ where: userToFind });
 };
 
 const customCreate = async (userData) => {
